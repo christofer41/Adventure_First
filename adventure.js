@@ -40,15 +40,15 @@ function selectOption(){
             
         case 3:
                 
-            if (enteredText.toLowerCase == "warrior") {
+            if (enteredText.toLowerCase() == "warrior") {
                 playerClass = "Warrior";
                 stage = 4;
             }
-            else if (enteredText.toLowerCase == "rouge") {
+            else if (enteredText.toLowerCase() == "rouge") {
                 playerClass = "Rouge";
                 stage = 5;
             }
-            else if (enteredText.toLowerCase == "wizard") {
+            else if (enteredText.toLowerCase() == "wizard") {
                 playerClass = "Wizard";
                 stage = 6;
             }
