@@ -1,5 +1,5 @@
 let theText = document.getElementById("text"); //The text
-let singleButton = document.getElementsByTagName("button"); //The button
+let singleButtons = document.getElementsByTagName("button"); //The button
 let enteredText = ""; //We create an empty variable that will store the text the user enters
 let playerClass; //The players class
 let stage = 1; //The stage we are on
@@ -26,14 +26,14 @@ function selectOption(){
     switch(stage) {
         case 1:
             theText.innerHTML = "What is your name?";
-            singleButton.innerHTML = "Submit Name";
+            singleButtons.innerHTML = "Submit Name";
             stage = 2;
             break;
 8
         case 2:
             const playerName = enteredText;
             theText.innerHTML = "Greetings " + playerName + "! Did you grow up as a rouge, a warrior, or a wizard?";
-            singleButton.innerHTML = "Submit Class";   
+            singleButtons.innerHTML = "Submit Class";   
             stage = 3;         
             break;
             
@@ -55,17 +55,17 @@ function selectOption(){
 
         case 4:
             theText.innerHTML = "You are a Warrior";
-            singleButton.innerHTML = "Yeah!";
+            singleButtons.innerHTML = "Yeah!";
             break;
 
         case 5:
             theText.innerHTML = "You are a Rouge";
-            singleButton.innerHTML = "Yeah!";
+            singleButtons.innerHTML = "Yeah!";
             break;
 
         case 6:
             theText.innerHTML = "You are a Wizard";
-            singleButton.innerHTML = "Yeah!";
+            singleButtons.innerHTML = "Yeah!";
             break;
 
     }
