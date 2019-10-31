@@ -1,55 +1,71 @@
-let theText = document.getElementById("theText");
-let buttonBox = document.getElementById("btn");
-let singleButton = document.getElementsByTagName("button");
-let buttons;
-let playerClass;
-let stage = 1;
+let theText = document.getElementById("text"); //The text
+let singleButton = document.getElementsByTagName("button"); //The button
+let enteredText = ""; //We create an empty variable that will store the text the user enters
+let playerClass; //The players class
+let stage = 1; //The stage we are on
 
 /**
- * 
- * @param {number} buttons - How many buttons we want
- * @param {number} i - How many
+ * The user presses the button
  */
-function changeButtons(buttons){
-    for (let i = 0; i <= singleButton.length; i++) {
-        document.getElementsByTagName("button")[i].remove();
-    }
-    for (let i = 0; i < buttons; i++) {
-        var para = document.createElement("button");
-        buttonBox.appendChild(para);
-    }    
-    console.log(buttons);
-}
-
-
-
-
-selectOption();
-
-for (let i = 0; i < singleButton.length; i++) {
-    singleButton[i].addEventListener("click", () => selectOption());
+function submit(){
+    enteredText = document.getElementById("enterText").value;
+    selectOption();
     
 }
 
+selectOption()
+
+/**
+ * What happens depinging on what "Stage" the user is on
+ */
 function selectOption(){
 
+    /**
+     * We store all the stages and what will happen next
+     */
     switch(stage) {
         case 1:
-            buttons = 3;
-            changeButtons(buttons);
-            theText.innerHTML = "What kind of player are you?" 
-            singleButton[0].innerHTML = "Fighter";
-            singleButton[1].innerHTML = "Rouge";
-            singleButton[2].innerHTML = "Wizard";
+            theText.innerHTML = "What is your name?";
+            singleButton.innerHTML = "Submit Name";
             stage = 2;
             break;
-
+8
         case 2:
-            buttons = 2;
-            changeButtons(buttons);
-            theText.innerHTML = "You are a fighter!"
-            singleButton[0].innerHTML = "That's right!";
-            singleButton[1].innerHTML = "Wait no!";
+            const playerName = enteredText;
+            theText.innerHTML = "Greetings " + playerName + "! Did you grow up as a rouge, a warrior, or a wizard?";
+            singleButton.innerHTML = "Submit Class";   
+            stage = 3;         
+            break;
+            
+        case 3:
+                
+            if (enteredText.toLowerCase == "warrior") {
+                playerClass = "Warrior";
+                stage = 4;
+            }
+            else if (enteredText.toLowerCase == "rouge") {
+                playerClass = "Rouge";
+                stage = 5;
+            }
+            else if (enteredText.toLowerCase == "wizard") {
+                playerClass = "Wizard";
+                stage = 6;
+            }
+            break;
+
+        case 4:
+            theText.innerHTML = "You are a Warrior";
+            singleButton.innerHTML = "Yeah!";
+            break;
+
+        case 5:
+            theText.innerHTML = "You are a Rouge";
+            singleButton.innerHTML = "Yeah!";
+            break;
+
+        case 6:
+            theText.innerHTML = "You are a Wizard";
+            singleButton.innerHTML = "Yeah!";
             break;
 
     }
