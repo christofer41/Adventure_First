@@ -1,0 +1,75 @@
+@font-face {
+    font-family: SdThoseGoodTimesOfLife-B1An;
+    src: url(SdThoseGoodTimesOfLife-B1An.ttf);
+}
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(forest.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+.textBox{
+    height: 10rem;
+    width: 20rem;
+    background-image: url(wood.jpg);
+    color: rgb(10, 24, 13);
+    border: 1.5px rgb(56, 36, 13) solid;
+    border-radius: 8px;
+    font-family: SdThoseGoodTimesOfLife-B1An;
+    font-size: 1.1rem;
+}
+
+.textBox >*{
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem;
+}
+
+.inputBox{
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    width: 70%;
+    text-align: center;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+}
+ 
+ :-moz-placeholder { /* This is for firefox 18 and under */
+    text-align: center;  
+}
+ 
+ ::-moz-placeholder {  /*This is for firefox 19 and over */
+    text-align: center;  
+}
+ 
+ :-ms-input-placeholder {  
+    text-align: center; 
+}
+
+.buttonBox{
+    display: flex;
+    justify-content: center;
+}
+
+button{
+    width: 70%;
+    border-radius: 8px;
+    border: 1px solid rgb(173, 173, 173);
+}
+
+button:hover{
+    border: 2px solid rgb(70, 70, 70);
+    border-top: none;
+}
