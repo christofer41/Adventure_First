@@ -2,6 +2,7 @@ let theText = document.getElementById("text"); //The text
 let singleButtons = document.getElementById("btn"); //The button
 let enteredText = ""; //We create an empty variable that will store the text the user enters
 let playerClass; //The players class
+let playerName; //The players name
 let stage = 1; //The stage we are on
 let textIndex = "";
 let marking = true; //The marking is "on"
@@ -47,7 +48,7 @@ function selectOption(){
             break;
 8
         case 2:
-            const playerName = enteredText;
+            playerName = enteredText;
             if (playerName == ""){
                 theText.innerHTML = "I'm sorry, what was that?";
                 singleButtons.innerHTML = "Stop messing around";
@@ -203,6 +204,79 @@ function selectOption(){
             break;
 
         case 21:
+            textIndex = personTalk.partOne;
+            setText(textIndex);
+            break;
 
+        case 22:
+            textIndex = personTalk.partTwoQuestion;
+            setText(textIndex);
+            break;
+
+        case 23:
+            if (enteredText.toLowerCase() == "attack"){
+                stage: 24;
+            }
+            else if (enteredText.toLowerCase() == "wait"){
+                stage: 28;
+            }
+            else if (enteredText.toLowerCase() == "ask" || enteredText.toLowerCase() == "who are you?"){
+                stage: 30;
+            }
+            else{
+                theText.innerHTML = "Please select: attack, wait or ask";
+                singleButtons.innerHTML = "Let's go"
+                break;
+            }
+            selectOption();
+            break;
+
+        case 24:
+            if (playerClass == "Warrior") {
+                textIndex = deathScene.Warrior;
+            }
+            else if (playerClass = "Rouge") {
+                textIndex = deathScene.Rouge;
+            }
+            else if (playerClass == "Wizard") {
+                textIndex = deathScene.Wizard;
+            }
+            setText(textIndex);
+            break;
+
+        case 25:
+            textIndex = deathScene.One;
+            setText(textIndex);
+            break;
+
+        case 26:
+            textIndex = deathScene.Two;
+            setText(textIndex);
+            break;
+
+        case 27:
+            textIndex = deathScene.Three;
+            setText(textIndex);
+            break;
+
+        case 28:
+            textIndex = personTalk.partThreeWait;
+            setText(textIndex);
+            break;
+
+        case 29:
+            textIndex = personTalk.partFourWait;
+            setText(textIndex);
+            break;
+
+        case 30:
+            textIndex = personTalk.partThreeAsk;
+            setText(textIndex);
+            break;
+
+        case 31:
+            textIndex = personTalk.partFourAsk;
+            setText(textIndex);
+            break;
     }
 }

@@ -88,8 +88,8 @@ let caveEnterance = {
 
     partThreeWizardQuestion: {
         text: "Do you wish to touch it?",
-        button: "What to do..",
-        level: 16
+            button: "What to do..",
+            level: 16
 
     },
 
@@ -122,18 +122,45 @@ let caveEnterance = {
 
 const personTalk = {
     partOne: {
-        text: "\"So you have finally arrived, I was fortold of your arrival\" His voice is raspy and reminiscent of an old man near death. You are unsure what to do."
+        text: "\"So you have finally arrived, I was fortold of your arrival\" His voice is raspy and reminiscent of an old man near death. You are unsure what to do.",
+        button: "What does he mean?",
+        level: 22
     },
 
     partTwoQuestion: {
-        text: "Will you: Wait, ask \"Who are you\" or attack?"
+        text: "Will you: Wait, ask \"Who are you\" or attack?",
+        button: "It's up to you.",
+        level: 0
+    },
+
+    partThreeWait: {
+        text: "You stay quiet and decide to let the mysterious being speak. The crooked old man shows his rotten teeth in an oddly toothy smile.",
+        button: "Let's be causious",
+        level: 29 
+    },
+
+    partThreeAsk: {
+        text: "\"Identify yourself!\" You ready yourself for whatever the crooked old man want with you.",
+        button: "Let's be firm with him!",
+        stage: 30
+    },
+
+    partFourWait: {
+        text: "\"Speechless?\" The man laughs with a disturbing tone. \No worries, I'll do the talking\" His tone shifts back into a more serious note. "
+    },
+
+    partFourAsk: {
+        text: "\"Going straight for the point, huh?\" The old man laughs, still with the toothy smile on his face. \"I will answer your question, " + playerName + " \" \
+        You feel sligtly shocked over the fact that he knew your name, but at this point you were to confused to be worried" 
     }
 }
 
 const deathScene = {
 
     Warrior: {
-        text: "You ready your axe"
+        text: "You ready your axe",
+        button: "Destroy him!",
+        stage: 
     },
 
     Rouge: {
