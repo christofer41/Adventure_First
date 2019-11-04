@@ -1,4 +1,11 @@
-let playerClasses = {
+let intro = {
+        text: "What is your name?",
+        button: "Submit Name",
+        level: 2
+    }
+
+
+let playerClasses = { //The text for the class choices
 
     warrior: {
         text: "You grew up as a mercenary, fighting for your life. You wielded your sword like your life depended on it. \
@@ -20,7 +27,7 @@ let playerClasses = {
     }
 }
 
-let wandering = {
+let wandering = { //The text for the forest walk
 
     partOne: {
         text: "You have wandered for three days, with nothing but an old map as your guide.",
@@ -51,7 +58,7 @@ let wandering = {
     }
 }
 
-let caveEnterance = {
+let caveEnterance = { //The text for outside the cave
 
     partOne: {
         text: "You find yourself outside a peculiar looking cave. \
@@ -120,7 +127,7 @@ let caveEnterance = {
 
 }
 
-let personTalk = {
+let personTalk = { //The text for the interaction of the strange old man
     partOne: {
         text: "\"So you have finally arrived, I was fortold of your arrival\" His voice is raspy and reminiscent of an old man near death. You are unsure what to do.",
         button: "What does he mean?",
@@ -215,7 +222,7 @@ let personTalk = {
     }
 }
 
-const deathScene = {
+const deathScene = { //Text for the death scene
 
     Warrior: {
         text: "You ready your axe",

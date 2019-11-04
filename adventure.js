@@ -12,7 +12,7 @@ let marking = true; //The marking is "on"
  * What happens when the user presses the button
  */
 function submit(){
-    enteredText = document.getElementById("enterText").value;
+    enteredText = document.getElementById("enterText").value; //We put what the user submitted inside the variabel
     document.getElementById("enterText").value = ""; //We remove the text from the box after the user presses the button
     selectOption();
     
@@ -23,9 +23,9 @@ function submit(){
  * @param {string} textIndex - We set the text, buttontext and stage depending on where and what the user does 
  */
 function setText(textIndex){
-    theText.innerHTML = textIndex.text;
-    singleButtons.innerHTML = textIndex.button;
-    stage = textIndex.level;
+    theText.innerHTML = textIndex.text; //Setting the text to be the same as in the object
+    singleButtons.innerHTML = textIndex.button; //Setting the button text to be the same as in the object
+    stage = textIndex.level; //Setting the stage to be the same as the level in object
 }
 
 
@@ -39,9 +39,8 @@ function selectOption(){
     switch(stage) { //Every case is a different "Route" that the player will take
 
         case 1:
-            theText.innerHTML = "What is your name?";  //Changes the text
-            singleButtons.innerHTML = "Submit Name";   //Changes the button text
-            stage = 2;
+            textIndex = intro;  //Getting the object that is needed for the scene
+            setText(textIndex); //Calling the fuction that will hande the object
             break;
 8
         case 2:
@@ -72,7 +71,7 @@ function selectOption(){
                 playerClass = "Wizard";
                 stage = 6;
             }
-            else{
+            else{ //If the user doesn't select a valid class, this will loop
                 theText.innerHTML = "Please enter a valid class! Choose between Warrior, Rouge, or Wizard!"
                 break;
             }
