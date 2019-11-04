@@ -225,19 +225,19 @@ let personTalk = { //The text for the interaction of the strange old man
 const deathScene = { //Text for the death scene
 
     Warrior: {
-        text: "You ready your axe",
-        button: "Destroy him!",
+        text: "You ready your axe and strike at your foe, however as your weapon should impact, it just passes right through your opponent. And then he is just gone.",
+        button: "What the..?",
         level: 25
     },
 
     Rouge: {
-        text: "You ready your knives",
-        button: "Gut him!",
+        text: "You ready your knives and rush your opponent, but before your knives hit their mark, your target vanish without a trace.",
+        button: "Were is he?",
         level: 25
     },
 
     Wizard: {
-        text: "You ready your spells",
+        text: "You ready your spells and throw a firebolt from your palm. But right when the blast would've hit it's mark, your opponent vanish without a trace.",
         button: "Scorch him!",
         level: 25
     },

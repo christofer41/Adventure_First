@@ -311,7 +311,7 @@ function selectOption(){
             break;
 
         case 37:
-            textIndex = personTalk.partNine;
+            textIndex = personTalk.partTen;
             setText(textIndex);
             break;
 
