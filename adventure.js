@@ -3,7 +3,9 @@ let singleButtons = document.getElementById("btn"); //The button
 let enteredText = ""; //We create an empty variable that will store the text the user enters
 let playerClass; //The players class
 let stage = 1; //The stage we are on
+let textIndex = "";
 let marking = true; //The marking is "on"
+
 
 /**
  * The user presses the button
@@ -13,6 +15,16 @@ function submit(){
     document.getElementById("enterText").value = ""; //We remove the text from the box after the user presses the button
     selectOption();
     
+}
+
+/**
+ * 
+ * @param {*} textIndex - We set the text, buttontext and stage depending on where and what the user does 
+ */
+function setText(textIndex){
+    theText.innerHTML = textIndex.text;
+    singleButtons.innerHTML = textIndex.button;
+    stage = textIndex.level;
 }
 
 
@@ -70,26 +82,23 @@ function selectOption(){
             break;
 
         case 4:
-            theText.innerHTML = warrior;
-            singleButtons.innerHTML = "Yeah!";
-            stage = 7;
+            textIndex = playerClasses.warrior;
+            setText(textIndex);
             break;
 
         case 5:
-            theText.innerHTML = rouge;
-            singleButtons.innerHTML = "Yeah!";
-            stage = 7;
+            textIndex = playerClasses.rouge;
+            setText(textIndex);
             break;
 
         case 6:
-            theText.innerHTML = wizard;
-            singleButtons.innerHTML = "Yeah!";
-            stage = 7;
+            textIndex = playerClasses.wizard;
+            setText(textIndex);
             break;
 
         case 7:
-            theText.innerHTML = wanderingPartOne;
-            singleButtons.innerHTML = "My feet hurt..";
+            textIndex = wandering.partOne;
+            setText(textIndex);
             if(playerClass == "Rouge") {
                 stage = 8;
             }
@@ -99,34 +108,29 @@ function selectOption(){
             break;
 
         case 8:
-            theText.innerHTML = wanderingPartTwoRouge;
-            singleButtons.innerHTML = "A piece of cake";
-            stage = 10;
+            textIndex = wandering.partTwoRouge;
+            setText(textIndex);
             break;
 
         case 9:
-            theText.innerHTML = wanderingPartTwo;
-            singleButtons.innerHTML = "I should maintain my finances better"
-            stage = 10;
+            textIndex = wandering.partTwo;
+            setText(textIndex);
             break;
 
         case 10:
-            theText.innerHTML = wanderingPartThree;
-            singleButtons.innerHTML = "Finally";
-            stage = 11;
+            textIndex = wandering.partThree;
+            setText(textIndex);
             break;
             
         case 11:
-            theText.innerHTML = caveEnteranceOne;
-            singleButtons.innerHTML = "How peculiar";
-            stage = 12;
             document.body.style.backgroundImage = "url('outsideCave.jpg')";
+            textIndex = caveEnterance.partOne;
+            setText(textIndex);
             break;
 
         case 12:
-            theText.innerHTML = caveEnteranceTwo;
-            singleButtons.innerHTML = "Hmm..";
-            stage = 13;
+            textIndex = caveEnterance.partTwo;
+            setText(textIndex);
             break;
 
         case 13:
@@ -152,15 +156,13 @@ function selectOption(){
             break;
 
         case 14:
-            theText.innerHTML = caveEnteranceThreeYesWizard;
-            singleButtons.innerHTML = "Interesting"
-            stage = 15;
+            textIndex = caveEnterance.partThreeWizard;
+            setText(textIndex);
             break;
 
         case 15:
-            theText.innerHTML = caveEnteranceThreeYesWizardQuestion;
-            singleButtons.innerHTML = "What to do.."
-            stage = 16;
+            textIndex = caveEnterance.partThreeWizardQuestion;
+            setText(textIndex);
             break;
 
         case 16:
@@ -179,28 +181,28 @@ function selectOption(){
             break;
 
         case 17:
-            theText.innerHTML = caveEnteranceThreeWizardTouch;
-            singleButtons.innerHTML = "Now what did that activate?"
-            stage = 20;
+            textIndex = caveEnterance.partThreeWizardTouch;
+            setText(textIndex);
             marking = false;
             break;
 
         case 18:
-            theText.innerHTML = caveEnteranceThreeYes;
-            singleButtons.innerHTML = "What did that do?"
-            stage = 20;
+            textIndex = caveEnterance.partThreeYes;
+            setText(textIndex);
             marking = false;
             break;
 
         case 19:
-            theText.innerHTML = caveEnteranceThreeNo;
-            singleButtons.innerHTML = "Let's look around"
-            stage = 20;
+            textIndex = caveEnterance.partThreeNo;
+            setText(textIndex);
             break;
 
         case 20:
-            theText.innerHTML = caveEnteranceFour;
-            singleButtons.innerHTML = "Coming soon"
+            textIndex = caveEnterance.partFour;
+            setText(textIndex);
             break;
+
+        case 21:
+
     }
 }
