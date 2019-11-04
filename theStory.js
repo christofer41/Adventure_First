@@ -120,7 +120,7 @@ let caveEnterance = {
 
 }
 
-const personTalk = {
+let personTalk = {
     partOne: {
         text: "\"So you have finally arrived, I was fortold of your arrival\" His voice is raspy and reminiscent of an old man near death. You are unsure what to do.",
         button: "What does he mean?",
@@ -130,7 +130,7 @@ const personTalk = {
     partTwoQuestion: {
         text: "Will you: Wait, ask \"Who are you\" or attack?",
         button: "It's up to you.",
-        level: 0
+        level: 23
     },
 
     partThreeWait: {
@@ -142,16 +142,76 @@ const personTalk = {
     partThreeAsk: {
         text: "\"Identify yourself!\" You ready yourself for whatever the crooked old man want with you.",
         button: "Let's be firm with him!",
-        stage: 30
+        level: 31
     },
 
     partFourWait: {
-        text: "\"Speechless?\" The man laughs with a disturbing tone. \No worries, I'll do the talking\" His tone shifts back into a more serious note. "
+        text: "\"Speechless?\" The man laughs with a disturbing tone. \No worries, we are almost finished here\" \
+        His tone shifts back into a more serious note. ",
+        button: "...finished?",
+        level: 32
     },
 
     partFourAsk: {
-        text: "\"Going straight for the point, huh?\" The old man laughs, still with the toothy smile on his face. \"I will answer your question, " + playerName + " \" \
-        You feel sligtly shocked over the fact that he knew your name, but at this point you were to confused to be worried" 
+        text: "\"Going straight for the point, huh?\" The old man laughs, still with the toothy smile on his face. \
+        \"I will answer your question in due time. \" \
+        His tone is calm, but something seems off.",
+        button: "Why not now?",
+        level: 32
+    },
+
+    partFive: {
+        text: "\"My name is Thernin, pleased to make your acquaintance\" He takes a bow. \" \
+        I have long waited for someone to come to this place. But there is no time for questions! Now hurry, get inside! \"",
+        button: "What's the rush?",
+        level: 33
+    },
+
+    partSix: {
+        text: "Before you have time to react, some kind of force grasps hold of your body and pulls you towards the cave. \
+        And before you know it, you are inside of the dark and forboding cave.",
+        button: "Oh crap!",
+        level: 34
+    },
+
+    partSeven: {
+        text: "As you turn around you are stumped to see that the enterance that you were forced through, was no more. \
+        Now you know for certain that something magical was at work in this cave.",
+        button: "Welp",
+        level: 35
+    },
+
+    partEightWizard: {
+        text: "You cast a small candlelight spell on your staff and light up the room",
+        button: "Magic!",
+        level: 36
+    },
+
+    partEightRouge: {
+        text: "You quickly grab a torch from your backpack, and light it with a flint that you always carry with you, \
+        illuminating your surroundings.",
+        button: "Preparation!",
+        level: 36
+    },
+
+    partEightWarrior: {
+        text: "You lift your axe skywards and mumble a small incantaintion, and your axe starts to glow. \
+        Your enchanted axe was a reward during a arm wrestling competition a few towns over, you knew that it would come in handy.",
+        button: "Enchantments!",
+        level: 36
+
+    },
+
+    partNine: {
+        text: "With a small sound of a single sentance that sound more like a plea for help echoing through your mind, you start to walk deeper into the cave.",
+        button: "What did it say?",
+        level: 37
+    },
+
+    partTen: {
+        text: "\"Please, Save us!\"",
+        button: "How can we refuse?",
+        level: 38
     }
 }
 
@@ -160,29 +220,39 @@ const deathScene = {
     Warrior: {
         text: "You ready your axe",
         button: "Destroy him!",
-        stage: 
+        level: 25
     },
 
     Rouge: {
-        text: "You ready your knives"
+        text: "You ready your knives",
+        button: "Gut him!",
+        level: 25
     },
 
     Wizard: {
-        text: "You ready your spells"
+        text: "You ready your spells",
+        button: "Scorch him!",
+        level: 25
     },
 
     One: { 
         text: "You can feel something in the back of the throat, you start to cough to try to get it out. However the more you cough the worse the feeling gets. \
-        As you are desperatly trying to cough whatever it is out, you finally manage to get something out."
+        As you are desperatly trying to cough whatever it is out, you finally manage to get something out.",
+        button: "What is that!?",
+        level: 26
     },
 
     Two: {
         text: "You stare in horror at what you see, it's something dark with a tar like substanse. As you look down you notice that your legs are missing, \
-        and in it's place is a puddle of the same tar like liquid."
+        and in it's place is a puddle of the same tar like liquid.",
+        button: "That can't be good",
+        level: 27
     },
 
     Three: {
         text: "You try to scream out in horror, however the only thing to come out is even more tar of what presumably used to be your tongue. \
-        It doesn't take long until all that remains of our hero is a dark and muddy stain on the ground."
+        It doesn't take long until all that remains of our hero is a dark and muddy stain on the ground.",
+        button: "F",
+        level: 38
     }
 }

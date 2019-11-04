@@ -1,4 +1,4 @@
-@font-face {
+@font-face { /*This is a custom font that we are using*/
     font-family: SdThoseGoodTimesOfLife-B1An;
     src: url(SdThoseGoodTimesOfLife-B1An.ttf);
 }
@@ -22,7 +22,7 @@ body{
     color: rgb(10, 24, 13);
     border: 1.5px rgb(56, 36, 13) solid;
     border-radius: 8px;
-    font-family: SdThoseGoodTimesOfLife-B1An;
+    font-family: SdThoseGoodTimesOfLife-B1An; /*The custom font*/
     font-size: 1.1rem;
 }
 
@@ -42,7 +42,7 @@ input{
     text-align: center;
 }
 
-::-webkit-input-placeholder {
+::-webkit-input-placeholder { /*We center the input text*/
     text-align: center;
 }
  
@@ -54,7 +54,7 @@ input{
     text-align: center;  
 }
  
- :-ms-input-placeholder {  
+ :-ms-input-placeholder {  /*All of these are for different browsers*/
     text-align: center; 
 }
 

@@ -4,12 +4,12 @@ let enteredText = ""; //We create an empty variable that will store the text the
 let playerClass; //The players class
 let playerName; //The players name
 let stage = 1; //The stage we are on
-let textIndex = "";
+let textIndex = ""; //We set the textIndex
 let marking = true; //The marking is "on"
 
 
 /**
- * The user presses the button
+ * What happens when the user presses the button
  */
 function submit(){
     enteredText = document.getElementById("enterText").value;
@@ -20,7 +20,7 @@ function submit(){
 
 /**
  * 
- * @param {*} textIndex - We set the text, buttontext and stage depending on where and what the user does 
+ * @param {string} textIndex - We set the text, buttontext and stage depending on where and what the user does 
  */
 function setText(textIndex){
     theText.innerHTML = textIndex.text;
@@ -29,17 +29,14 @@ function setText(textIndex){
 }
 
 
-selectOption()
+selectOption() //We call the function
 
 /**
- * What happens depinging on what "Stage" the user is on
+ * What happens depending on what "Stage" the user is on
  */
 function selectOption(){
 
-    /**
-     * We store all the stages and what will happen next
-     */
-    switch(stage) {
+    switch(stage) { //Every case is a different "Route" that the player will take
 
         case 1:
             theText.innerHTML = "What is your name?";  //Changes the text
@@ -51,14 +48,14 @@ function selectOption(){
             playerName = enteredText;
             if (playerName == ""){
                 theText.innerHTML = "I'm sorry, what was that?";
-                singleButtons.innerHTML = "Stop messing around";
+                singleButtons.innerHTML = "Enter the name";
                 break;
             }
             else{
                 theText.innerHTML = "Greetings " + playerName + "! Did you grow up as a rouge, a warrior, or a wizard?";
                 singleButtons.innerHTML = "Submit Class";   
                 stage = 3;
-            }         
+            }       
             break;
             
         case 3:
@@ -215,13 +212,14 @@ function selectOption(){
 
         case 23:
             if (enteredText.toLowerCase() == "attack"){
-                stage: 24;
+                stage = 24;
             }
             else if (enteredText.toLowerCase() == "wait"){
-                stage: 28;
+                stage = 28;
             }
             else if (enteredText.toLowerCase() == "ask" || enteredText.toLowerCase() == "who are you?"){
-                stage: 30;
+                stage = 30;
+                break;
             }
             else{
                 theText.innerHTML = "Please select: attack, wait or ask";
@@ -278,5 +276,50 @@ function selectOption(){
             textIndex = personTalk.partFourAsk;
             setText(textIndex);
             break;
+
+        case 32:
+            textIndex = personTalk.partFive;
+            setText(textIndex);
+            break;
+
+        case 33:
+            textIndex = personTalk.partSix;
+            setText(textIndex);
+            break;
+
+        case 34:
+            document.body.style.backgroundImage = "url('cave.jpg')";
+            textIndex = personTalk.partSeven;
+            setText(textIndex);
+            break;
+
+        case 35:
+            if (playerClass == "Warrior") {
+                textIndex = personTalk.partEightWarrior;
+            }
+            else if (playerClass == "Rouge") {
+                textIndex = personTalk.partEightRouge;
+            }
+            else if (playerClass == "Wizard") {
+                textIndex = personTalk.partEightWizard;
+            }
+            setText(textIndex);
+            break;
+
+        case 36:
+            textIndex = personTalk.partNine;
+            setText(textIndex);
+            break;
+
+        case 37:
+            textIndex = personTalk.partNine;
+            setText(textIndex);
+            break;
+
+        case 38:
+            theText.innerHTML = "The End";
+            singleButtons.innerHTML = "For now!";
+            break;
+        
     }
 }
